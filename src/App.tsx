@@ -1,10 +1,7 @@
 import React, { FC } from 'react';
 
-const App: FC = () => (
-	<div className='App'>
-		<h1>Hello World!</h1>
-	</div>
-);
+import Router from './View/Router';
 
+const App: FC = () => <Router />;
 
 export default App;

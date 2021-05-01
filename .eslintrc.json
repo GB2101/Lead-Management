@@ -23,8 +23,8 @@
     "rules": {
         "@typescript-eslint/no-var-requires": 0,
                 "@typescript-eslint/no-shadow": "error",
-
-                "indent": [ "warn", "tab" ],
+				"@typescript-eslint/indent": ["warn", "tab"],
+                "indent": "off",
                 "linebreak-style": [ "error", "unix" ],
                 "quotes": [ "warn", "single" ],
                 "semi": [ "warn", "always", { "omitLastInOneLineBlock": true}],
@@ -139,6 +139,7 @@
                 "prefer-exponentiation-operator": "warn",
                 "quote-props": [ "error", "as-needed" ],
                 "semi-spacing": "warn",
+				"semi-style": "error",
                 "space-before-blocks": [ "warn", "always" ],
                 "space-before-function-paren": [
                         "warn",
