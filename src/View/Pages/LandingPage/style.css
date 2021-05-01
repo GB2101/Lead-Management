@@ -1,0 +1,48 @@
+.landing-page {
+	height: 100%;
+}
+
+.header {
+	background-color: #14222b;
+	color: #fff;
+	height: 95px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	padding: 20px 35px;
+}
+
+.button button {
+	background-color: #14222b;
+	color: #fff;
+	border: none;
+	margin-right: 24px;
+	font-size: 24px;
+}
+
+.button button:hover {
+	text-decoration: underline;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.body {
+	background-color: #14222b;
+	height: calc(100% - 95px);
+	color: #fff;
+}
+
+.apresentation {
+	padding-left: 90px;
+	padding-top: 2.5em;
+	font-size: 64px;
+	font-weight: 400;
+}
+
+.body p {
+	padding-left: 95px;
+	color: #ddd;
+	font-size: 24px;
+}
