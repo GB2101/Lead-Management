@@ -1,0 +1,30 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	height: 100%;
+	width: 75vw;
+	max-width: 500px;
+	padding: 50px;
+}
+
+.label {
+	font-size: 24px;
+	padding: 25px 5px 10px;
+}
+
+.input {
+	padding: 10px 15px;
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid #333;
+	border-radius: 8px;
+	color: #333;
+	font-size: 18px;
+}
+
+.submit {
+	margin: 25px 25%;
+	padding: 10px;
+	font-size: 18px;
+}

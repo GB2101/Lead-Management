@@ -2,13 +2,11 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import './style.css';
-import Logo from '../../Components/Logo';
+import Header from '../../Components/Header';
 
 const LandingPage: FC = () => (
 	<div className='landing-page'>
-		<header className='header'>
-			<Logo />
-
+		<Header>
 			<div className='button'>
 				<Link to='/login'>
 					<button>Entrar</button>
@@ -17,7 +15,7 @@ const LandingPage: FC = () => (
 					<button>Registrar</button>
 				</Link>
 			</div>
-		</header>
+		</Header>
 
 		<div className='body'>
 			<h1 className='apresentation'>Lead Management</h1>

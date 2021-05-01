@@ -1,0 +1,11 @@
+.signin-header {
+	background-color: #14222b;
+	height: 95px;
+	box-shadow: 0 10px 10px 10px #14222b;
+	padding: 20px 35px;
+	color: #fff;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}

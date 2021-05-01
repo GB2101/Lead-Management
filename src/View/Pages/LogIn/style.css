@@ -1,0 +1,12 @@
+.login-page {
+	height: 100%;
+}
+
+.login-body {
+	height: calc(100% - 95px);
+	background-color: rgba(0, 0, 0, 0);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
