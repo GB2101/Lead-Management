@@ -33,7 +33,7 @@
 }
 
 .newlead-selectors {
-	height: calc(100% - 70px);
+	height: 318px;
 	width: 100%;
 	max-width: 25vw;
 	display: flex;

@@ -23,6 +23,8 @@
     "rules": {
         "@typescript-eslint/no-var-requires": 0,
 				"react/prop-types": "off",
+				"@typescript-eslint/explicit-module-boundary-types": "off",
+
                 "@typescript-eslint/no-shadow": "error",
 				"@typescript-eslint/indent": ["warn", "tab"],
                 "indent": "off",
