@@ -1,9 +1,12 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import './style.css';
 
 interface Props {
-	register?: boolean
+	register?: boolean;
+	submit: string;
+	buttonLabel: string;
 }
 
 const UserForm: FC<Props> = props => (
@@ -22,7 +25,11 @@ const UserForm: FC<Props> = props => (
 			: ''
 		}
 
-		<button className='submit'>Registrar</button>
+		<button className='submit'>
+			<Link to={props.submit} className='submit'>
+				{props.buttonLabel}
+			</Link>
+		</button>
 	</div>
 );
 

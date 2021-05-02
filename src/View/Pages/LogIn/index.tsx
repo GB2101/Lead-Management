@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import './style.css';
 import Header from '../../Components/Header';
@@ -9,7 +10,7 @@ const LogIn: FC = () => (
 		<Header />
 
 		<div className='login-body'>
-			<UserForm />
+			<UserForm submit='/panel' buttonLabel='Entrar' />
 		</div>
 	</div>
 );

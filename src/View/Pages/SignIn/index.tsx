@@ -9,7 +9,7 @@ const SignIn: FC = () => (
 		<Header />
 
 		<div className='signin-body'>
-			<UserForm register />
+			<UserForm register submit='/panel' buttonLabel='Registrar' />
 		</div>
 	</div>
 );
