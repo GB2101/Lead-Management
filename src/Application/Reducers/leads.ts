@@ -12,7 +12,12 @@ const InitialState: LeadTable = {
 		phone: '(00)90000-0000',
 		email: 'org_international@email.com',
 		status: 0,
-		oporunities: [ 'RPA', 'BPM' ],
+		oportunities: {
+			rpa: true,
+			digital: false,
+			analytics: false,
+			bpm: true,
+		},
 	},
 };
 

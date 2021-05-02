@@ -1,18 +1,33 @@
 import { LeadFormAction, SET_NAME, SET_PHONE, SET_EMAIL, SET_OPORTUNITIES } from '../Actions/leadFormAction';
 import { field_validation } from '../functions/field_validation';
 
+interface Oportunities {
+	rpa: boolean,
+	digital: boolean;
+	analytics: boolean;
+	bpm: boolean;
+}
+
 interface LeadForm {
 	name?: string;
 	phone?: string;
 	email?: string;
-	oportunities?: string[];
 	checked?: string;
+	oportunities: {
+		[key: string]: boolean
+	};
 
 	completed: boolean;
 }
 
 const InitialState: LeadForm = {
 	completed: false,
+	oportunities: {
+		rpa: false,
+		digital: false,
+		analytics: false,
+		bpm: false,
+	},
 };
 
 const reducer = (state: LeadForm = InitialState, action: LeadFormAction): LeadForm => {
@@ -57,7 +72,7 @@ const reducer = (state: LeadForm = InitialState, action: LeadFormAction): LeadFo
 		}
 
 		case SET_OPORTUNITIES: {
-			const { oportunities } = action.payload;
+			const { oportunity, value } = action.payload;
 			const { name, phone, email } = state;
 			const checked = 'checked';
 
@@ -65,9 +80,13 @@ const reducer = (state: LeadForm = InitialState, action: LeadFormAction): LeadFo
 
 			return {
 				...state,
-				oportunities,
 				checked,
 				completed,
+				oportunities: {
+					...state.oportunities,
+
+					[oportunity]: value,
+				},
 			};
 		}
 

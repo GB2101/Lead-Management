@@ -27,7 +27,8 @@ export interface IN_SET_EMAIL{
 export interface IN_SET_OPORTUNITIES{
 	type: typeof SET_OPORTUNITIES;
 	payload: {
-		oportunities: string[];
+		oportunity: string;
+		value: boolean;
 	}
 }
 
@@ -46,9 +47,12 @@ export const set_email = (email: string): IN_SET_EMAIL => ({
 	payload: { email },
 });
 
-export const set_oportunities = (oportunities: string[]): IN_SET_OPORTUNITIES => ({
+export const set_oportunities = (oportunity: string, value: boolean): IN_SET_OPORTUNITIES => ({
 	type: SET_OPORTUNITIES,
-	payload: { oportunities },
+	payload: {
+		oportunity,
+		value,
+	},
 });
 
 export type LeadFormAction = IN_SET_NAME | IN_SET_PHONE | IN_SET_EMAIL | IN_SET_OPORTUNITIES;

@@ -2,11 +2,13 @@ export const ADD_LEAD = 'leads/add_lead';
 export const UPDATE_LEAD = 'leads/update/lead';
 
 export interface Lead {
-	name: string;
-	phone: string;
-	email: string;
+	name?: string;
+	phone?: string;
+	email?: string;
 	status: number;
-	oporunities: string[];
+	oportunities: {
+		[key: string]: boolean
+	};
 }
 
 export interface IN_ADD_LEAD {
