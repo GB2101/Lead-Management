@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
-import { set_user_signin, set_password_signin, set_confirmation_signin } from '../../../Application/Actions/UserForm';
+import { set_user_signin, set_password_signin, set_confirmation_signin } from '../../../Application/Actions/signInFormActions';
 
 import Input from '../Input';
 import './style.css';

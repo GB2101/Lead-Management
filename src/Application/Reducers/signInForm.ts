@@ -1,5 +1,6 @@
-import { SignIn, SET_USER, SET_PASSWORD, SET_CONFIRMATION } from '../../Actions/UserForm';
-import { password_validation as validation } from '../../functions/password_validation';
+import { SignInAction, SET_USER, SET_PASSWORD, SET_CONFIRMATION } from '../Actions/signInFormActions';
+import { password_validation as validation } from '../functions/password_validation';
+import { field_validation } from '../functions/field_validation';
 
 interface SignInForm {
 	username?: string;
@@ -33,17 +34,13 @@ const InitialState: SignInForm = {
 	},
 };
 
-const reducer = (state: SignInForm = InitialState, action: SignIn): SignInForm => {
+const reducer = (state: SignInForm = InitialState, action: SignInAction): SignInForm => {
 	switch (action.type) {
 		case SET_USER: {
 			const { username } = action.payload;
 			const { password, confirmation } = state;
 
-			let completed = true;
-
-			!username ? completed = false : '';
-			!password ? completed = false : '';
-			!confirmation ? completed = false : '';
+			const completed = field_validation(username, password, confirmation);
 
 			return {
 				...state,
@@ -59,11 +56,7 @@ const reducer = (state: SignInForm = InitialState, action: SignIn): SignInForm =
 			const { password } = action.payload;
 			const { username, confirmation } = state;
 
-			let completed = true;
-
-			!username ? completed = false : '';
-			!password ? completed = false : '';
-			!confirmation ? completed = false : '';
+			const completed = field_validation(username, password, confirmation);
 
 			const validated = validation(password);
 
@@ -82,11 +75,7 @@ const reducer = (state: SignInForm = InitialState, action: SignIn): SignInForm =
 			const { confirmation } = action.payload;
 			const { username, password } = state;
 
-			let completed = true;
-
-			!username ? completed = false : 'teste';
-			!password ? completed = false : '';
-			!confirmation ? completed = false : '';
+			const completed = field_validation(username, password, confirmation);
 
 			const confirmed = confirmation === password;
 
