@@ -1,0 +1,13 @@
+.checkbox {
+	padding: 10px 10px 0;
+}
+
+.checkbox-label {
+	font-size: 18px;
+}
+
+.checkbox-input {
+	margin: 0 10px 0 0;
+	height: 14px;
+	width: 14px;
+}

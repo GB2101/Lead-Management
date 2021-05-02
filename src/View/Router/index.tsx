@@ -5,6 +5,7 @@ import LandingPage from '../Pages/LandingPage';
 import SignInPage from '../Pages/SignIn';
 import LogInPage from '../Pages/LogIn';
 import LeadPanel from '../Pages/LeadPanel';
+import NewLead from '../Pages/NewLead';
 
 const Router: FC = () => (
 	<BrowserRouter>
@@ -13,6 +14,7 @@ const Router: FC = () => (
 			<Route path='/signin' component={SignInPage} />
 			<Route path='/login' component={LogInPage} />
 			<Route path='/panel' component={LeadPanel} />
+			<Route path='/newlead' component={NewLead} />
 		</Switch>
 	</BrowserRouter>
 );

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
+import Input from '../Input';
 import './style.css';
 
 interface Props {
@@ -11,16 +12,12 @@ interface Props {
 
 const UserForm: FC<Props> = props => (
 	<div className='form'>
-		<label className='label'>Usuário*</label>
-		<input className='input' type='text' />
-
-		<label className='label'>Password*</label>
-		<input className='input' type='password' />
+		<Input label='Usuário*' type='text' />
+		<Input label='Password*' type='password' />
 
 		{props.register
 			? <>
-				<label className='label'>Confirmação Password*</label>
-				<input className='input' type='password' />
+				<Input label='Confirmação Password*' type='password' />
 			</>
 			: ''
 		}

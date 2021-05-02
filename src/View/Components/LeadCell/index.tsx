@@ -17,7 +17,6 @@ const LeadCell: FC<Props> = props => {
 	props.last ? className += ' last' : '';
 
 	if (props.index !== undefined) {
-		console.log(props.index, 'exist');
 		props.index % 2 !== 0 ? className += ' even' : className += ' odd';
 	}
 
