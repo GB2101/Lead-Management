@@ -4,7 +4,7 @@ import './style.css';
 import Logo from '../Logo';
 
 const Header: FC = props => (
-	<header className='signin-header'>
+	<header className='top-header'>
 		<Logo />
 		{props.children}
 	</header>

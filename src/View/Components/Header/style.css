@@ -1,5 +1,6 @@
-.signin-header {
+.top-header {
 	background-color: #14222b;
+	width: 100%;
 	height: 95px;
 	box-shadow: 0 10px 10px 10px #14222b;
 	padding: 20px 35px;

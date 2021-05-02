@@ -1,0 +1,47 @@
+.leadcell {
+	margin-top: 15px;
+	padding: 15px 30px;
+	border: 2px solid #14222b;
+	border-left: none;
+
+	font-size: 14px;
+	font-weight: 300;
+
+	white-space: nowrap;
+	overflow: hidden;
+
+	width: 25vw;
+	height: 65px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.leadcell h1 {
+	font-weight: 400;
+}
+
+.header {
+	color: #fff;
+	background-color: #243e4e;
+	border-right: 2px solid #fff;
+}
+
+.first {
+	border-left: 2px solid #14222b;
+	border-radius: 15px 0 0 15px;
+}
+
+.last {
+	border-right: 2px solid #14222b;
+	border-radius: 0 15px 15px 0;
+}
+
+.odd {
+	background-color: #bbbbb7;
+}
+
+.even {
+	background-color: #ececeb;
+}

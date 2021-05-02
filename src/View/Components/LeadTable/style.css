@@ -1,0 +1,34 @@
+.leadtable {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	height: 100%;
+
+	/* margin: 15px; */
+
+	/* width: max-content; */
+}
+
+.title-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-bottom: 5px;
+
+	box-shadow: 0 7px 5px -5px #131313;
+}
+
+.scroll-area {
+	height: calc(100vh - 350px);
+	min-height: 200px;
+	margin: 0 0 25px;
+}
+
+.scroll-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 100%;
+	padding: 0 15px;
+}

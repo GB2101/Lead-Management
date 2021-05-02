@@ -1,0 +1,47 @@
+.leadpanel {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.leadpanel-body {
+	height: calc(100% - 95px);
+	padding: 50px;
+	padding-bottom: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: fit-content;
+}
+
+.leadpanel-top {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 15px;
+}
+
+.leadpanel-top h1 {
+	font-size: 32px;
+	font-weight: 500;
+	padding-right: 50px;
+}
+
+.leadpanel-top button {
+	padding: 10px 50px;
+	font-size: 18px;
+	background-color: #4169e1;
+	border: 2px solid #1d44b8;
+	border-radius: 15px;
+	color: #fff;
+}
+
+.leadpanel-top button:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	box-shadow: 3px 3px 5px #252525;
+}
