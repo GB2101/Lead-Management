@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { store } from 'react-notifications-component';
 
 import { set_name, set_email, set_phone, set_oportunities, reset } from '../../../Application/Actions/leadFormAction';
 import { add_lead } from '../../../Application/Actions/leadsActions';
@@ -57,11 +58,32 @@ const NewLead: FC = () => {
 	const handleSubmit = () => {
 		const { completed, ...data } = form;
 		if (completed) {
+			store.addNotification({
+				title: 'Lead adicionado com Sucesso',
+				message: 'O novo Lead foi cadastrado com sucesso.',
+				type: 'success',
+				insert: 'top',
+				container: 'bottom-right',
+				dismiss: {
+					duration: 5000,
+					onScreen: true,
+				},
+			});
 			history.push('/panel');
 			dispatch(add_lead({ ...data, status: 0 }));
 			dispatch(reset());
 		} else {
-			alert('Ainda faltam dados');
+			store.addNotification({
+				title: 'Preencha todos os campos',
+				message: 'Todos os campos são obrigatórios, por favor, preencha-os.',
+				type: 'warning',
+				insert: 'top',
+				container: 'bottom-right',
+				dismiss: {
+					duration: 5000,
+					onScreen: true,
+				},
+			});
 		}
 	};
 

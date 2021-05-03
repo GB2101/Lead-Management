@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import { Link } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 import { set_user_signin, set_password_signin, set_confirmation_signin } from '../../../Application/Actions/signInFormActions';
@@ -9,8 +8,8 @@ import './style.css';
 
 interface Props {
 	register?: boolean;
-	submit: string;
 	buttonLabel: string;
+	onSubmit?: () => void;
 }
 
 const UserForm: FC<Props> = props => {
@@ -37,10 +36,8 @@ const UserForm: FC<Props> = props => {
 				: ''
 			}
 
-			<button className='submit'>
-				<Link to={props.submit} className='submit'>
-					{props.buttonLabel}
-				</Link>
+			<button className='submit' onClick={props.onSubmit}>
+				{props.buttonLabel}
 			</button>
 		</div>
 	);
