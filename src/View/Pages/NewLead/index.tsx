@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
-import { set_name, set_email, set_phone, set_oportunities } from '../../../Application/Actions/leadFormAction';
+import { set_name, set_email, set_phone, set_oportunities, reset } from '../../../Application/Actions/leadFormAction';
 import { add_lead } from '../../../Application/Actions/leadsActions';
 import { selectCheckbox, selectForm } from '../../../Application/Selectors/leadForm';
 
@@ -57,8 +57,9 @@ const NewLead: FC = () => {
 	const handleSubmit = () => {
 		const { completed, ...data } = form;
 		if (completed) {
-			dispatch(add_lead({ ...data, status: 0 }));
 			history.push('/panel');
+			dispatch(add_lead({ ...data, status: 0 }));
+			dispatch(reset());
 		} else {
 			alert('Ainda faltam dados');
 		}

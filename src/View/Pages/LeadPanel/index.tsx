@@ -22,4 +22,5 @@ const LeadPanel: FC = () => (
 	</div>
 );
 
+
 export default LeadPanel;

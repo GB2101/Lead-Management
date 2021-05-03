@@ -1,12 +1,5 @@
-import { LeadFormAction, SET_NAME, SET_PHONE, SET_EMAIL, SET_OPORTUNITIES } from '../Actions/leadFormAction';
+import { LeadFormAction, SET_NAME, SET_PHONE, SET_EMAIL, SET_OPORTUNITIES, RESET } from '../Actions/leadFormAction';
 import { field_validation } from '../functions/field_validation';
-
-interface Oportunities {
-	rpa: boolean,
-	digital: boolean;
-	analytics: boolean;
-	bpm: boolean;
-}
 
 interface LeadForm {
 	name?: string;
@@ -88,6 +81,10 @@ const reducer = (state: LeadForm = InitialState, action: LeadFormAction): LeadFo
 					[oportunity]: value,
 				},
 			};
+		}
+
+		case RESET: {
+			return InitialState;
 		}
 
 		default: {

@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import { Link } from 'react-router-dom';
+
+// import { Link } from 'react-router-dom';
 
 import './style.css';
 import Header from '../../Components/Header';

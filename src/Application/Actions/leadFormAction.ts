@@ -2,6 +2,7 @@ export const SET_NAME = 'lead_form/set_name';
 export const SET_PHONE = 'lead_form/set_phone';
 export const SET_EMAIL = 'lead_form/set_email';
 export const SET_OPORTUNITIES = 'lead_form/set_oportunities';
+export const RESET = 'lead_form/reset';
 
 export interface IN_SET_NAME{
 	type: typeof SET_NAME;
@@ -32,6 +33,10 @@ export interface IN_SET_OPORTUNITIES{
 	}
 }
 
+export interface IN_RESET {
+	type: typeof RESET;
+}
+
 export const set_name = (name: string): IN_SET_NAME => ({
 	type: SET_NAME,
 	payload: { name },
@@ -55,4 +60,8 @@ export const set_oportunities = (oportunity: string, value: boolean): IN_SET_OPO
 	},
 });
 
-export type LeadFormAction = IN_SET_NAME | IN_SET_PHONE | IN_SET_EMAIL | IN_SET_OPORTUNITIES;
+export const reset = (): IN_RESET => ({
+	type: RESET,
+});
+
+export type LeadFormAction = IN_SET_NAME | IN_SET_PHONE | IN_SET_EMAIL | IN_SET_OPORTUNITIES | IN_RESET;

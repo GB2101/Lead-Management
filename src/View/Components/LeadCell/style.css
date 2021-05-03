@@ -1,8 +1,7 @@
 .leadcell {
 	margin-top: 15px;
 	padding: 15px 30px;
-	border: 2px solid #14222b;
-	border-left: none;
+	border: 1px solid #14222b;
 
 	font-size: 14px;
 	font-weight: 300;
@@ -20,22 +19,13 @@
 
 .leadcell h1 {
 	font-weight: 400;
+	cursor: default;
 }
 
 .header {
 	color: #fff;
 	background-color: #243e4e;
-	border-right: 2px solid #fff;
-}
-
-.first {
-	border-left: 2px solid #14222b;
-	border-radius: 15px 0 0 15px;
-}
-
-.last {
-	border-right: 2px solid #14222b;
-	border-radius: 0 15px 15px 0;
+	border: 2px solid #14222b;
 }
 
 .odd {
@@ -44,4 +34,18 @@
 
 .even {
 	background-color: #ececeb;
+}
+
+.isDragging {
+	border: 2px dashed #14222b;
+	cursor: grabbing;
+}
+
+.active:hover {
+	opacity: 0.9;
+	cursor: grab;
+}
+
+.active h1 {
+	cursor: grab;
 }

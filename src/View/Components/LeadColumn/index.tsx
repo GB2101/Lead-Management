@@ -2,15 +2,14 @@ import React, { FC } from 'react';
 
 import LeadCell from '../LeadCell';
 
-interface DataType {
-	id: number;
+export interface DataType {
+	id: string;
 	status: number;
-	title: string;
+	name?: string;
 }
 
 interface Props {
-	first?: boolean;
-	last?: boolean;
+	column: number;
 	amount: number;
 	data: {
 		[key: number]: DataType;
@@ -24,9 +23,28 @@ const LeadColumn: FC<Props> = props => {
 		const item = props.data[index];
 
 		if (item === undefined) {
-			content.push(<LeadCell key={index} {...props} index={index} />);
+			content.push(
+				<LeadCell
+					key={index}
+					{...props}
+					empty
+					id={index.toString()}
+					index={index}
+					column={props.column}
+				/>,
+			);
 		} else {
-			content.push(<LeadCell key={index} {...props} index={index}>{item.title}</LeadCell>);
+			content.push(
+				<LeadCell
+					key={item.id}
+					{...props}
+					id={item.id}
+					index={index}
+					column={props.column}
+				>
+					{item.name}
+				</LeadCell>,
+			);
 		}
 	}
 

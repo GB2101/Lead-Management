@@ -7,8 +7,32 @@ interface LeadTable {
 }
 
 const InitialState: LeadTable = {
-	aaa: {
+	org: {
 		name: 'Org. Internacionais',
+		phone: '(00)90000-0000',
+		email: 'org_international@email.com',
+		status: 0,
+		oportunities: {
+			rpa: true,
+			digital: false,
+			analytics: false,
+			bpm: true,
+		},
+	},
+	farm: {
+		name: 'Ind. Farm. LTDA',
+		phone: '(00)90000-0000',
+		email: 'org_international@email.com',
+		status: 1,
+		oportunities: {
+			rpa: true,
+			digital: false,
+			analytics: false,
+			bpm: true,
+		},
+	},
+	musc: {
+		name: 'Musc. Sound Live Cmp',
 		phone: '(00)90000-0000',
 		email: 'org_international@email.com',
 		status: 0,
